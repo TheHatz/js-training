@@ -1,5 +1,5 @@
 describe('clicking the button', function() {
-  it('should add the qa-red class to the main-div ', function() {
+  it('should toggle the qa-red/qa-blue class to the main-div ', function() {
     browser.waitForAngularEnabled(false);
     browser.get('http://localhost:8080');
     expect(browser.getCurrentUrl()).toBe('http://localhost:8080/');
