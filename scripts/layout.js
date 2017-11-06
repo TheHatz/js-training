@@ -16,7 +16,7 @@ class Layout{
         let colorDiv = document.createElement('div')
         this.root.appendChild(colorDiv)
         colorDiv.style.background = 'blue'
-        colorDiv.setAttribute('class', 'main-div qa-main-div')
+        colorDiv.setAttribute('class', 'main-div qa-main-div qa-blue')
     }
 
     createButton() {
