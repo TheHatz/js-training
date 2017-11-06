@@ -4,11 +4,12 @@ describe('clicking the button', () => {
     browser.get('http://localhost:8080');
     expect(browser.getCurrentUrl()).toBe('http://localhost:8080/');
     const mainDiv = element(by.className('qa-main-div'));
+    const button = element(by.buttonText('Submit'));
     expect(mainDiv.getAttribute('class')).toContain('qa-blue');
-    element(by.buttonText('Submit')).click();
+    button.click();
     expect(mainDiv.getAttribute('class')).toContain('qa-red');
     expect(mainDiv.getAttribute('class')).not.toContain('qa-blue');
-    element(by.buttonText('Submit')).click();
+    button.click();
     expect(mainDiv.getAttribute('class')).toContain('qa-blue');
     expect(mainDiv.getAttribute('class')).not.toContain('qa-red');
   });
