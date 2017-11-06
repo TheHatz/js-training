@@ -6,5 +6,6 @@ describe('clicking the button', function() {
     element(by.buttonText('Submit')).click();
     let mainDiv = element(by.className('qa-main-div'));
     expect(mainDiv.getAttribute('class')).toContain('qa-red');
+    expect(mainDiv.getAttribute('class')).not.toContain('qa-blue');
   });
 });
