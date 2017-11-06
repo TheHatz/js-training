@@ -1,5 +1,5 @@
 describe('clicking the button', function() {
-  it('should toggle the qa-red/qa-blue class to the main-div ', function() {
+  it('should toggle the qa-red/qa-blue class on the main-div ', function() {
     browser.waitForAngularEnabled(false);
     browser.get('http://localhost:8080');
     expect(browser.getCurrentUrl()).toBe('http://localhost:8080/');
@@ -8,5 +8,8 @@ describe('clicking the button', function() {
     element(by.buttonText('Submit')).click();
     expect(mainDiv.getAttribute('class')).toContain('qa-red');
     expect(mainDiv.getAttribute('class')).not.toContain('qa-blue');
+    element(by.buttonText('Submit')).click();
+    expect(mainDiv.getAttribute('class')).toContain('qa-blue');
+    expect(mainDiv.getAttribute('class')).not.toContain('qa-red');
   });
 });
