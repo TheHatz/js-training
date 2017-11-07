@@ -15,4 +15,8 @@ exports.config = {
     dryRun: false,
     compiler: []
   },
+
+  onPrepare: function () {
+      browser.manage().window().maximize(); // maximize the browser before executing the feature files
+  }
 };
