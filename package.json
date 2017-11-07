@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/chapman21/js-training/issues"
   },
-  "homepage": "https://github.com/chapman21/js-training#readme"
+  "homepage": "https://github.com/chapman21/js-training#readme",
+  "devDependencies": {
+    "cucumber": "^3.1.0",
+    "protractor": "^5.2.0",
+    "protractor-cucumber-framework": "^4.1.1"
+  },
+  "dependencies": {}
 }
