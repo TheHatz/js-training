@@ -23,6 +23,7 @@ class Layout{
         let nextButton = document.createElement('button')
         this.root.appendChild(nextButton)
         nextButton.innerText = 'Submit'
+        nextButton.setAttribute('class', 'qa-button')
         nextButton.addEventListener('click',this.toggleColor)
     }
 

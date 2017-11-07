@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/chapman21/js-training/issues"
   },
-  "homepage": "https://github.com/chapman21/js-training#readme"
+  "homepage": "https://github.com/chapman21/js-training#readme",
+  "devDependencies": {
+    "protractor": "^5.2.0",
+    "webdriver-manager": "^12.0.6"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1"
+  }
 }
