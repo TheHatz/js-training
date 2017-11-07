@@ -1,15 +1,21 @@
-var myStepDefinitionsWrapper = function () {
+var expect = require('chai').expect;
+var defineSupportCode = require('cucumber').defineSupportCode;
+var AppPage =  require('./app.po');
 
-    this.Given(/^I go to "http:\/\/localhost:8080\/"$/, function (arg1, callback) {
-        callback.pending();
-    });
+defineSupportCode(({Given, When, Then, Before}) => {
 
-    this.When(/^I click the "([^"]*)" button$/, function (arg1, callback) {
-        callback.pending();
-    });
+  Before(() => {
+    app = new AppPage();
+  });
 
-    this.Then(/^the div should change color$/, function (callback) {
-        callback.pending();
-    });
-};
-module.exports = myStepDefinitionsWrapper;
+  Given('I am on the test site',
+    () => app.navigateTo());
+
+  When('I click the submit button',
+    () => app.clickButton());
+
+  Then('I should see the div change color',
+    () => app.getClickResults((ele) => {
+      expect(ele.getAttribute('class')).to.contain('qa-red')
+    }))
+});
