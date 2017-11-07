@@ -5,6 +5,7 @@ describe('clicking the button', () => {
     expect(browser.getCurrentUrl()).toBe('http://localhost:8080/');
     const mainDiv = element(by.className('qa-main-div'));
     const button = element(by.buttonText('Submit'));
+
     expect(mainDiv.getAttribute('class')).toContain('qa-blue');
     button.click();
     expect(mainDiv.getAttribute('class')).toContain('qa-red');
