@@ -6,3 +6,4 @@ Feature: Submit
     Given I am on the test site
     When I click the submit button
     Then I should see the div change color
+
