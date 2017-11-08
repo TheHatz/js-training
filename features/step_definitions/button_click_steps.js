@@ -4,6 +4,14 @@ const AppPage =  require('./support/pages/js_training');
 
 defineSupportCode(({Given, When, Then, Before}) => {
 
+
+
+
+
+
+
+
+
   Before(() => {
     app = new AppPage();
   });
