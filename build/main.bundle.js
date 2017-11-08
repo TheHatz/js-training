@@ -75,6 +75,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__header___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__header__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layout__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__layout__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__textInput__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__textInput___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__textInput__);
+
+
 
 
 
@@ -167,6 +171,31 @@ class Layout{
 }
 
 new Layout(document.querySelector('.layout'));
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+class TextInput {
+
+    constructor(root) {
+        this.root = root[0];
+        this.initialize()
+    }
+
+    initialize() {
+        console.log('Init')
+        let layout = document.querySelector('.layout');
+        let input = document.createElement('input');
+        layout.appendChild(input)
+        input.value = "Hello George";
+
+    }
+
+}
+
+new TextInput(document.getElementsByTagName('body'));
 
 
 /***/ })
