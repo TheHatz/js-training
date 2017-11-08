@@ -14,7 +14,7 @@ defineSupportCode(({Given, When, Then, Before}) => {
   When(/^I click the submit button$/,
     () => app.clickSubmit());
 
-  Then('I should see the div change color',
+  Then(/^I should see the div change color$/,
     () => app.getClickResults((ele) => {
       expect(ele.getAttribute('class')).to.contain('qa-red')
     }))
