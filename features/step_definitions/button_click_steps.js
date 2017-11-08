@@ -1,6 +1,6 @@
-var expect = require('chai').expect;
-var defineSupportCode = require('cucumber').defineSupportCode;
-var AppPage =  require('./app.po');
+const expect = require('chai').expect;
+const defineSupportCode = require('cucumber').defineSupportCode;
+const AppPage =  require('./support/pages/js_training');
 
 defineSupportCode(({Given, When, Then, Before}) => {
 
@@ -12,12 +12,10 @@ defineSupportCode(({Given, When, Then, Before}) => {
     () => app.navigateTo());
 
   When(/^I click the submit button$/,
-    () => app.clickButton());
+    () => app.clickSubmit());
 
   Then(/^I should see the div change color$/,
     () => app.getClickResults((ele) => {
       expect(ele.getAttribute('class')).to.contain('qa-red')
     }))
 });
-
-
