@@ -1,14 +1,18 @@
-let protractor = require('protractor')
-
 class AppPage {
+
+  constructor(){
+    this.submit = element(by.className('qa-button'));
+  }
+
 
   navigateTo() {
     browser.waitForAngularEnabled(false);
     return browser.get('/');
   }
 
-  clickButton() {
-    return element(by.className('qa-button')).click();
+  clickSubmit() {
+    return this.submit.click();
+
   }
 
   getClickResults() {

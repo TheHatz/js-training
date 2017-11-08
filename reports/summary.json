@@ -24,7 +24,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1
+              "duration": 2
             }
           },
           {
@@ -37,7 +37,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 239
+              "duration": 189
             }
           },
           {
@@ -50,7 +50,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 100
+              "duration": 83
             }
           },
           {
@@ -62,8 +62,7 @@
               "location": "features/step_definitions/button_click_steps.js:17"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           }
         ]
